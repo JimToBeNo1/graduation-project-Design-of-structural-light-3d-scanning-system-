@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MW</class>
+ <widget class="QMainWindow" name="MW">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>16101102004 杨学俊 毕业设计</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLabel" name="title">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>20</y>
+      <width>301</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>结构光三维扫描系统设计</string>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="wordWrap">
+     <bool>false</bool>
+    </property>
+    <property name="openExternalLinks">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="photo">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>150</y>
+      <width>100</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>拍照</string>
+    </property>
+    <property name="checked">
+     <bool>false</bool>
+    </property>
+    <property name="autoRepeat">
+     <bool>true</bool>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="video">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>230</y>
+      <width>100</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>实时</string>
+    </property>
+    <property name="checked">
+     <bool>false</bool>
+    </property>
+    <property name="autoRepeat">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="calibration">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>150</y>
+      <width>100</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>校准</string>
+    </property>
+    <property name="checked">
+     <bool>false</bool>
+    </property>
+    <property name="autoRepeat">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="discern">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>230</y>
+      <width>100</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>识别</string>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="camera_count">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>130</y>
+      <width>64</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>130</y>
+      <width>54</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>相机数</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>210</y>
+      <width>54</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>相机ID</string>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="camera_ID">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>210</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="digitCount">
+     <number>11</number>
+    </property>
+   </widget>
+   <widget class="QVideoWidget" name="VW" native="true">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>480</y>
+      <width>640</width>
+      <height>480</height>
+     </rect>
+    </property>
+    <property name="tabletTracking">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="Time_Lcd">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>40</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="digitCount">
+     <number>8</number>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>640</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="actionnew"/>
+    <addaction name="actionopen"/>
+    <addaction name="actionclose"/>
+    <addaction name="separator"/>
+    <addaction name="actionsave_photo"/>
+    <addaction name="actionsave_video"/>
+    <addaction name="separator"/>
+    <addaction name="actionsave"/>
+    <addaction name="actionsave_as"/>
+    <addaction name="actionsave_all"/>
+    <addaction name="separator"/>
+    <addaction name="actionexit"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>编辑</string>
+    </property>
+    <addaction name="actionundo"/>
+    <addaction name="actionredo"/>
+    <addaction name="actioncut"/>
+    <addaction name="actioncopy"/>
+    <addaction name="actionpaste"/>
+    <addaction name="actionpaste_special"/>
+    <addaction name="separator"/>
+    <addaction name="actionselect"/>
+    <addaction name="separator"/>
+    <addaction name="actionfind"/>
+    <addaction name="separator"/>
+    <addaction name="actiontool"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>构建</string>
+    </property>
+    <addaction name="actionmessages"/>
+    <addaction name="actionworkspace"/>
+    <addaction name="actionsource_browser"/>
+    <addaction name="separator"/>
+    <addaction name="actionbreakpoints"/>
+    <addaction name="separator"/>
+    <addaction name="actiontoolbars"/>
+    <addaction name="actionstatus_bar"/>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>调试</string>
+    </property>
+    <addaction name="actionstart"/>
+    <addaction name="actionstop"/>
+   </widget>
+   <widget class="QMenu" name="menu_5">
+    <property name="title">
+     <string>工具</string>
+    </property>
+    <addaction name="actionoptions"/>
+    <addaction name="separator"/>
+    <addaction name="actioncondigure_tools"/>
+    <addaction name="actionfilename_extensions"/>
+    <addaction name="actionconfigure_viewers"/>
+   </widget>
+   <widget class="QMenu" name="menu_6">
+    <property name="title">
+     <string>控件</string>
+    </property>
+    <addaction name="actionclose_tab"/>
+    <addaction name="actionclose_window"/>
+    <addaction name="separator"/>
+    <addaction name="actionsplit"/>
+   </widget>
+   <widget class="QMenu" name="menu_7">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="actionInformation_center"/>
+    <addaction name="actionabout"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_4"/>
+   <addaction name="menu_5"/>
+   <addaction name="menu_6"/>
+   <addaction name="menu_7"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionnew">
+   <property name="text">
+    <string>new</string>
+   </property>
+  </action>
+  <action name="actionopen">
+   <property name="text">
+    <string>open</string>
+   </property>
+  </action>
+  <action name="actionclose">
+   <property name="text">
+    <string>close</string>
+   </property>
+  </action>
+  <action name="actionsave_photo">
+   <property name="text">
+    <string>save photo</string>
+   </property>
+  </action>
+  <action name="actionsave_video">
+   <property name="text">
+    <string>save video</string>
+   </property>
+  </action>
+  <action name="actionsave">
+   <property name="text">
+    <string>save</string>
+   </property>
+  </action>
+  <action name="actionsave_as">
+   <property name="text">
+    <string>save as..</string>
+   </property>
+  </action>
+  <action name="actionsave_all">
+   <property name="text">
+    <string>save all</string>
+   </property>
+  </action>
+  <action name="actionexit">
+   <property name="text">
+    <string>exit</string>
+   </property>
+  </action>
+  <action name="actionundo">
+   <property name="text">
+    <string>undo</string>
+   </property>
+  </action>
+  <action name="actionredo">
+   <property name="text">
+    <string>redo</string>
+   </property>
+  </action>
+  <action name="actioncut">
+   <property name="text">
+    <string>cut</string>
+   </property>
+  </action>
+  <action name="actioncopy">
+   <property name="text">
+    <string>copy</string>
+   </property>
+  </action>
+  <action name="actionpaste">
+   <property name="text">
+    <string>paste</string>
+   </property>
+  </action>
+  <action name="actionpaste_special">
+   <property name="text">
+    <string>paste special</string>
+   </property>
+  </action>
+  <action name="actionselect">
+   <property name="text">
+    <string>select all</string>
+   </property>
+  </action>
+  <action name="actionfind">
+   <property name="text">
+    <string>find</string>
+   </property>
+  </action>
+  <action name="actiontool">
+   <property name="text">
+    <string>tool</string>
+   </property>
+  </action>
+  <action name="actionmessages">
+   <property name="text">
+    <string>messages</string>
+   </property>
+  </action>
+  <action name="actionworkspace">
+   <property name="text">
+    <string>workspace</string>
+   </property>
+  </action>
+  <action name="actionsource_browser">
+   <property name="text">
+    <string>source browser</string>
+   </property>
+  </action>
+  <action name="actionbreakpoints">
+   <property name="text">
+    <string>breakpoints</string>
+   </property>
+  </action>
+  <action name="actiontoolbars">
+   <property name="text">
+    <string>toolbars</string>
+   </property>
+  </action>
+  <action name="actionstatus_bar">
+   <property name="text">
+    <string>status bar</string>
+   </property>
+  </action>
+  <action name="actionoptions">
+   <property name="text">
+    <string>options</string>
+   </property>
+  </action>
+  <action name="actioncondigure_tools">
+   <property name="text">
+    <string>condigure tools</string>
+   </property>
+  </action>
+  <action name="actionfilename_extensions">
+   <property name="text">
+    <string>filename extensions</string>
+   </property>
+  </action>
+  <action name="actionconfigure_viewers">
+   <property name="text">
+    <string>configure viewers</string>
+   </property>
+  </action>
+  <action name="actionclose_tab">
+   <property name="text">
+    <string>close tab</string>
+   </property>
+  </action>
+  <action name="actionclose_window">
+   <property name="text">
+    <string>close window</string>
+   </property>
+  </action>
+  <action name="actionsplit">
+   <property name="text">
+    <string>split</string>
+   </property>
+  </action>
+  <action name="actionstart">
+   <property name="text">
+    <string>start</string>
+   </property>
+  </action>
+  <action name="actionstop">
+   <property name="text">
+    <string>stop</string>
+   </property>
+  </action>
+  <action name="actionInformation_center">
+   <property name="text">
+    <string>Information center</string>
+   </property>
+  </action>
+  <action name="actionabout">
+   <property name="text">
+    <string>about</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QVideoWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">qvideowidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
